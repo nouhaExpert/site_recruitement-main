@@ -1,31 +1,17 @@
 import React ,{ useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom'
 import toast, { Toaster } from 'react-hot-toast';
-import { useFormik } from 'formik';
-import { registerValidation } from '../../helper/validate';
-import convertToBase64 from '../../helper/convert';
-import { registerUser } from '../../helper/helper'
-import avatar from '../../assets/avatar.png'
 import axios from 'axios';
-import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
-import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import IconButton, { IconButtonProps } from '@mui/material/IconButton';
 import PhoneIcon from '@material-ui/icons/Phone';
 import RoomIcon from '@material-ui/icons/Room';
 import AlternateEmailIcon from '@material-ui/icons/AlternateEmail';
 
-const bull = (
-  <Box
-    component="span"
-    sx={{ display: 'inline-block', mx: '2px', transform: 'scale(0.8)' }}
-  >
-    •
-  </Box>
-);
+
 export default function Contact() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
